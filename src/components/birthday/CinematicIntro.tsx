@@ -146,7 +146,7 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
       "Stay legendary! 😎"
     ];
     return [
-      `Dear ${name || 'Wonderful Human'}`,
+      `Dear ${name || 'Cutiepie'}`,
       "I wanted to wish you a year of pure happiness...",
       "May your kindness always come back to you tenfold ✨",
       "I love you so much! 💖"

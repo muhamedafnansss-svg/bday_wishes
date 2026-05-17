@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Star {
   id: number;
@@ -10,6 +11,7 @@ interface Star {
 }
 
 export const ShootingStars = ({ count = 10 }) => {
+  const isMobile = useIsMobile();
   const stars: Star[] = Array.from({ length: count }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
@@ -48,14 +50,14 @@ export const ShootingStars = ({ count = 10 }) => {
               height: star.size,
               boxShadow: "0 0 10px #fff, 0 0 20px #fff",
             }}
-            animate={{
+            animate={isMobile ? undefined : {
               boxShadow: [
                 "0 0 5px #fff, 0 0 10px #fff",
                 "0 0 15px #fff, 0 0 25px #fff",
                 "0 0 5px #fff, 0 0 10px #fff",
               ],
             }}
-            transition={{
+            transition={isMobile ? undefined : {
               duration: 0.3,
               repeat: Infinity,
             }}

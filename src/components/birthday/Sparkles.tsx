@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Sparkle {
   id: number;
@@ -26,6 +27,7 @@ const orbColors = [
 ];
 
 export const Sparkles = ({ count = 20 }: { count?: number }) => {
+  const isMobile = useIsMobile();
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
   const [orbs, setOrbs] = useState<Orb[]>([]);
 
@@ -84,7 +86,8 @@ export const Sparkles = ({ count = 20 }: { count?: number }) => {
             height: o.size,
             background: `radial-gradient(circle, ${o.color}40, transparent)`,
             animation: `drift ${o.duration}s ease-in-out ${o.delay}s infinite alternate`,
-            filter: `blur(${o.size / 4}px)`,
+            filter: isMobile ? "none" : `blur(${o.size / 4}px)`,
+            willChange: "transform",
           }}
         />
       ))}

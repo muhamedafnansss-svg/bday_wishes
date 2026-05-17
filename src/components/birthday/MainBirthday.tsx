@@ -337,7 +337,7 @@ export const MainBirthday = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "0px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl w-full p-8 md:p-20 backdrop-blur-3xl border relative overflow-hidden"
+          className="max-w-4xl w-full p-8 md:p-20 backdrop-blur-md md:backdrop-blur-3xl border relative overflow-hidden"
           style={{
             background: `linear-gradient(165deg, rgba(30,30,30,0.9), rgba(10,10,10,0.98))`,
             borderColor: `${primaryColor}40`,
@@ -417,7 +417,7 @@ export const MainBirthday = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
               whileHover={!isMobile ? { y: -15, scale: 1.03, rotate: i % 2 === 0 ? 1 : -1, boxShadow: `0 30px 60px -15px ${primaryColor}40` } : undefined}
-              className="p-10 backdrop-blur-3xl border cursor-pointer group bg-gradient-to-br from-white/10 to-transparent border-white/10"
+              className="p-10 backdrop-blur-md md:backdrop-blur-3xl border cursor-pointer group bg-gradient-to-br from-white/10 to-transparent border-white/10"
               style={{ borderRadius: 'var(--card-radius, 2.5rem)' }}
               onClick={addEmoji}
             >
@@ -439,7 +439,7 @@ export const MainBirthday = () => {
             whileHover={shouldAnimate ? { scale: 1.02 } : undefined}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.3 }}
-            className="w-full rounded-[3rem] border border-white/10 bg-gradient-to-r from-primary/15 to-transparent p-8 text-left shadow-2xl backdrop-blur-3xl hover:border-primary/40"
+            className="w-full rounded-[3rem] border border-white/10 bg-gradient-to-r from-primary/15 to-transparent p-8 text-left shadow-2xl backdrop-blur-md md:backdrop-blur-3xl hover:border-primary/40"
           >
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
@@ -466,7 +466,7 @@ export const MainBirthday = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-3xl p-6"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md md:backdrop-blur-3xl p-6"
             onClick={() => setGiftStage('closed')}
           >
             <motion.div

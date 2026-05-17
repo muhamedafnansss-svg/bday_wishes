@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Orb {
   id: number;
@@ -11,6 +12,7 @@ interface Orb {
 }
 
 export const FloatingOrbs = ({ count = 8 }) => {
+  const isMobile = useIsMobile();
   const orbs: Orb[] = Array.from({ length: count }, (_, i) => ({
     id: i,
     color: ["#FF1493", "#00FFFF", "#FFD700", "#FF69B4", "#4ECDC4"][i % 5],
@@ -26,7 +28,7 @@ export const FloatingOrbs = ({ count = 8 }) => {
       {orbs.map((orb) => (
         <motion.div
           key={orb.id}
-          className="absolute rounded-full blur-3xl"
+          className={`absolute rounded-full ${isMobile ? '' : 'blur-3xl'}`}
           style={{
             width: orb.size,
             height: orb.size,

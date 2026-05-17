@@ -116,7 +116,7 @@ export const PhotoGallery = () => {
           viewport={{ once: true }}
           className="font-display text-6xl md:text-8xl lg:text-[10rem] font-black text-center mb-24 bg-gradient-to-b from-white via-white/80 to-white/20 bg-clip-text text-transparent drop-shadow-2xl"
         >
-          MEMORIES 📸
+          GALLERY ✨
         </motion.h3>
 
         <motion.div 

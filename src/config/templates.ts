@@ -9,7 +9,7 @@
  */
 
 export type Gender = "male" | "female" | "other";
-export type Relationship = "partner" | "friend" | "family" | "colleague" | "mentor";
+export type Relationship = "partner" | "friend" ;
 export type TemplateTheme = "romantic" | "fun" | "energetic" | "elegant" | "playful" | "nostalgic";
 export type AgeGroup = "teen" | "young-adult" | "adult" | "senior";
 
@@ -129,16 +129,16 @@ Happy Birthday. Take a moment to see yourself through my eyes—you are absolute
 With Deepest Love,
 [Your Name]`,
 
-  family: `To Our Dear ${name},
+  family: `To My Dear ${name},
 
-Family is more than just blood; it's the anchor in the storm and the laughter in the quiet. Having you as a part of our family is one of our greatest blessings. You bring a unique light, a steady strength, and a heart full of kindness that binds us all together.
+Family is more than just blood; it's the anchor in the storm and the laughter in the quiet. Having you as a part of my family is one of my greatest blessings. You bring a unique light, a steady strength, and a heart full of kindness that binds me to you.
 
-We've watched you grow, overcome, and succeed, and our pride in you knows no bounds. Thank you for being the person you are—the one we can always count on, the one who makes our gatherings brighter, and the one we love beyond measure.
+I've watched you grow, overcome, and succeed, and my pride in you knows no bounds. Thank you for being the person you are—the one I can always count on, the one who makes my days brighter, and the one I love beyond measure.
 
-Happy Birthday. May your day be filled with the same warmth and joy you bring to all of us every day.
+Happy Birthday. May your day be filled with the same warmth and joy you bring to me every day.
 
-With All Our Love,
-Your Family`,
+With All My Love,
+[Your Name]`,
 
   sibling: `To My Amazing Sibling, ${name},
 
@@ -376,8 +376,8 @@ export const MESSAGE_TEMPLATES = {
   fun_friend_young:
     "Another year older, still awesome! Let's party like we're 21! 🥳",
   fun_colleague: "Happy Birthday! Cheers to another year of collaboration! 🎊",
-  family_child: "Happy Birthday to our Precious One! We love you so much! 🎂",
-  family_adult: "Happy Birthday to our Beloved! You make us so proud! ❤️",
+  family_child: "Happy Birthday to my Precious One! I love you so much! 🎂",
+  family_adult: "Happy Birthday to my Beloved! You make me so proud! ❤️",
   family_senior:
-    "Happy Birthday to our Wonderful Parent! Thank you for everything! 🌟",
+    "Happy Birthday to my Wonderful Parent! Thank you for everything! 🌟",
 };

@@ -17,48 +17,52 @@ export const FinalSurprise = () => {
   return (
     <section className="relative z-20 py-32 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
-          <h2 className="font-display text-5xl md:text-8xl font-black mb-6 bg-gradient-to-r from-primary via-white to-accent bg-clip-text text-transparent">
-            Our Special Memories 🎞️
-          </h2>
-          <p className="text-xl md:text-2xl text-foreground/60 max-w-2xl mx-auto italic">
-            "A journey of a thousand miles begins with a single step, but it's the moments we share that make it worth traveling."
-          </p>
-        </motion.div>
-
-        {/* Memory Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
-          {memories.map((memory, i) => (
+        {memories.length > 0 && (
+          <>
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 50, rotate: i % 2 === 0 ? -2 : 2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.2 }}
-              whileHover={{ scale: 1.05, y: -10, rotate: i % 2 === 0 ? 2 : -2 }}
-              className="group relative aspect-[4/5] bg-white/5 border border-white/10 p-4 rounded-3xl backdrop-blur-xl overflow-hidden shadow-2xl"
+              className="text-center mb-20"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-              {memory.image ? (
-                <img src={memory.image} alt="Memory" className="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700" />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-white/5 rounded-2xl">
-                  <Camera size={48} className="text-white/10" />
-                </div>
-              )}
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-xl md:text-2xl font-display font-bold text-white drop-shadow-lg leading-tight">
-                  {memory.text}
-                </p>
-              </div>
+              <h2 className="font-display text-5xl md:text-8xl font-black mb-6 bg-gradient-to-r from-primary via-white to-accent bg-clip-text text-transparent">
+                Our Special Memories 🎞️
+              </h2>
+              <p className="text-xl md:text-2xl text-foreground/60 max-w-2xl mx-auto italic">
+                "A journey of a thousand miles begins with a single step, but it's the moments we share that make it worth traveling."
+              </p>
             </motion.div>
-          ))}
-        </div>
+
+            {/* Memory Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+              {memories.map((memory, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 50, rotate: i % 2 === 0 ? -2 : 2 }}
+                  whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.2 }}
+                  whileHover={{ scale: 1.05, y: -10, rotate: i % 2 === 0 ? 2 : -2 }}
+                  className="group relative aspect-[4/5] bg-white/5 border border-white/10 p-4 rounded-3xl backdrop-blur-xl overflow-hidden shadow-2xl"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  {memory.image ? (
+                    <img src={memory.image} alt="Memory" className="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-white/5 rounded-2xl">
+                      <Camera size={48} className="text-white/10" />
+                    </div>
+                  )}
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <p className="text-xl md:text-2xl font-display font-bold text-white drop-shadow-lg leading-tight">
+                      {memory.text}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </>
+        )}
 
         {/* Final Video Surprise */}
         {config.finalVideoUrl && (

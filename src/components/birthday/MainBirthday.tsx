@@ -51,7 +51,7 @@ export const MainBirthday = () => {
   const reduceMotion = useReducedMotion();
   const shouldAnimate = !isMobile && !reduceMotion;
   const mood = getMood();
-  const letterSignoff = senderName ? `\n\nWith love,\n${senderName}` : '';
+  const letterSignoff = `\n\nWith love,\n${senderName || 'Fahd'}`;
   const primaryColor = favoriteColor || '#FF6B6B';
   const bigWishes = useMemo(() => getBigWishes(name, relationship, gender, config.interests || []), [name, relationship, gender, config.interests]);
 
@@ -309,7 +309,7 @@ export const MainBirthday = () => {
           <div className="absolute top-0 right-0 p-8 opacity-10 text-9xl">✨</div>
           <div className="text-7xl text-center mb-10 animate-bounce">💌</div>
           <h3 className="font-display text-4xl md:text-6xl font-black text-center mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {relationship === 'partner' ? "From My Heart" : relationship === 'friend' ? "Legendary Message" : "A Special Message"}
+            {relationship === 'partner' ? "From My Heart" : relationship === 'friend' ? "Legendary Message" : "Someone who is more than a friend"}
           </h3>
           <div className="space-y-10 text-center text-2xl md:text-3xl text-foreground/90 leading-relaxed">
             <p className="font-display font-black text-3xl md:text-5xl" style={{ color: primaryColor }}>Dear {name},</p>

@@ -29,18 +29,10 @@ export const PhotoGallery = () => {
       { src: PHOTO_ASSETS.photo3 || photo3Default, fallback: photo3Default, key: "p3" },
     ].filter(p => p.src !== null);
 
-    const captions = relationship === 'partner' ? [
-      "Every moment with you is a gift 💖",
-      "Building our beautiful future ✨",
-      "My heart's favorite place 🌹"
-    ] : relationship === 'friend' ? [
-      "Legendary times with the MVP 🚀",
-      "Making memories and bad decisions! 😂",
-      "Stay epic, stay you! 🍻"
-    ] : [
-      "Family is where life begins ✨",
-      "Cherishing every smile 💖",
-      "A journey filled with love 🌟"
+    const captions = [
+      "Some pictures speak softly but stay in my mind for a long time ✨",
+      "The first thing I noticed in this picture wasn't the costume - it was your eyes ✨",
+      "The smile that stole my heart 💖"
     ];
 
     return base.map((p, i) => ({ ...p, caption: captions[i] || "Beautiful memory ✨" }));

@@ -101,9 +101,9 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
     }
     return [
       "Today is a day that belongs to history...",
-      `Because we are celebrating the ${isMale ? 'King' : isFemale ? 'Queen' : 'Icon'} of the family!`,
-      "Someone whose presence is a gift to every single one of us...",
-      "I wanted to build something that lasts as long as the memories we share...",
+      `Because I am celebrating the Queen of my life!`,
+      "Someone whose presence is a gift to me...",
+      "I wanted to build something that lasts as long as the memories I share with you...",
       "So, sit back, relax, and enjoy the show! ✨"
     ];
   }, [relationship, gender]);
@@ -122,9 +122,9 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
       "Are you ready for the big reveal? ❤️",
     ];
     return [
-      "You bring so much warmth into our lives...",
+      "You bring so much warmth into my life...",
       "You deserve a celebration as bright as your smile.",
-      "We put our hearts into this, just for you...",
+      "I put my heart into this, just for you...",
       "Let the celebration begin! ✨",
     ];
   }, [relationship]);
@@ -147,9 +147,9 @@ export const CinematicIntro = ({ onComplete }: CinematicIntroProps) => {
     ];
     return [
       `Dear ${name || 'Wonderful Human'}`,
-      "We all wanted to wish you a year of pure happiness...",
+      "I wanted to wish you a year of pure happiness...",
       "May your kindness always come back to you tenfold ✨",
-      "We love you so much! 💖"
+      "I love you so much! 💖"
     ];
   }, [name, relationship, gender]);
 

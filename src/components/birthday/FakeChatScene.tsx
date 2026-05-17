@@ -125,7 +125,7 @@ export const FakeChatScene = ({ onComplete }: FakeChatSceneProps) => {
               {theme.icon}
             </div>
             <div>
-              <p className="text-white font-black tracking-tight text-lg">{name || 'Special Someone'}</p>
+              <p className="text-white font-black tracking-tight text-lg">{name || 'You'}</p>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_#22c55e]" />
                 <p className="text-xs text-green-500/80 font-bold uppercase tracking-widest">{theme.status}</p>

@@ -333,7 +333,7 @@ export const MainBirthday = () => {
               <div className="text-left text-lg md:text-xl leading-relaxed whitespace-pre-line font-light">
                 {config.letterOverride
                   ? `${config.letterOverride}${letterSignoff}`
-                  : `To someone who is more than just a friend,\n\nYou have brought so much light and joy into my life. Every moment shared with you is a treasure, and I am incredibly grateful to have you by my side. You truly are someone dear to me.\n\nWishing you a birthday as beautiful and special as you are.${letterSignoff}`}
+                  : `To someone who is so much more than a friend,\n\nFrom the moment you came into my life, everything just felt brighter. You have this beautiful way of understanding me without words, of making ordinary moments feel extraordinary, and of being the exact person I need.\n\nWe started as friends, but somewhere along the way, you became my favorite person, my safe space, and someone I hold closer to my heart than words can explain. The connection we share is rare, and I wouldn't trade it for the world.\n\nToday is all about celebrating you—the incredible person you are and the beautiful place you hold in my life. May your birthday be filled with as much happiness as you give me every single day.${letterSignoff}`}
               </div>
             </div>
           </div>

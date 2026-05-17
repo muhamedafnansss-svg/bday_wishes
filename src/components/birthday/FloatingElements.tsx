@@ -48,7 +48,7 @@ export const FloatingElements = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Background Atmosphere Blobs (Layer 1) */}
-      <div className={`absolute inset-0 opacity-20 ${isMobile ? 'blur-[40px]' : 'blur-[120px]'}`}>
+      <div className={`absolute inset-0 opacity-20 ${isMobile ? '' : 'blur-[120px]'}`}>
         <motion.div 
           animate={{ 
             x: [0, 150, 0], 
@@ -57,7 +57,8 @@ export const FloatingElements = () => {
             rotate: [0, 180, 360]
           }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/4 -left-20 w-[40rem] h-[40rem] rounded-full bg-primary"
+          className="absolute top-1/4 -left-20 w-[40rem] h-[40rem] rounded-full"
+          style={{ background: isMobile ? 'radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)' : 'hsl(var(--primary))' }}
         />
         <motion.div 
           animate={{ 
@@ -67,7 +68,8 @@ export const FloatingElements = () => {
             rotate: [360, 180, 0]
           }}
           transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-1/4 -right-20 w-[45rem] h-[45rem] rounded-full bg-secondary"
+          className="absolute bottom-1/4 -right-20 w-[45rem] h-[45rem] rounded-full"
+          style={{ background: isMobile ? 'radial-gradient(circle, hsl(var(--secondary)) 0%, transparent 70%)' : 'hsl(var(--secondary))' }}
         />
       </div>
 

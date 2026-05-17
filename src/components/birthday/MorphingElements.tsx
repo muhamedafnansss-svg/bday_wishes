@@ -61,10 +61,10 @@ export const MorphingElements = () => {
           style={{
             width: shape.size,
             height: shape.size,
-            backgroundColor: shape.color,
+            background: `radial-gradient(circle, ${shape.color} 0%, transparent 70%)`,
             left: `${shape.startX}%`,
             top: `${shape.startY}%`,
-            filter: isMobile ? "blur(20px)" : "blur(40px)",
+            filter: isMobile ? "none" : "blur(40px)",
             willChange: "transform",
           }}
           animate={{

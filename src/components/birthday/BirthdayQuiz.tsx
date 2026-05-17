@@ -23,15 +23,16 @@ export const BirthdayQuiz = () => {
 
   const questions: Question[] = useMemo(() => {
     const { name, interests, relationship, gender } = config;
+    const displayName = name || "Aaachyaaa";
     const base: Question[] = [
       {
         q: `Who is the most legendary person born on this day?`,
-        options: ["Albert Einstein", "A Celebrity", name, "A Penguin"],
+        options: ["Albert Einstein", "A Celebrity", displayName, "A Penguin"],
         correct: 2,
-        reason: `Duh! It's obviously ${name}! Nobody else comes close.`
+        reason: `Duh! It's obviously ${displayName}! Nobody else comes close.`
       },
       {
-        q: `What is ${name}'s current mood today?`,
+        q: `What is ${displayName}'s current mood today?`,
         options: ["Sleepy", "Hungry", "Super OP & Legendary", "Bored"],
         correct: 2,
         reason: "It's their birthday! They are in God Mode today."
@@ -40,7 +41,7 @@ export const BirthdayQuiz = () => {
 
     if (interests?.includes('car')) {
       base.push({
-        q: `If ${name} could have any car today, what would it be?`,
+        q: `If ${displayName} could have any car today, what would it be?`,
         options: ["A Cycle", "A Supercar", "A Bus", "A Scooter"],
         correct: 1,
         reason: "Because legends drive fast!"
@@ -49,7 +50,7 @@ export const BirthdayQuiz = () => {
 
     if (relationship === 'partner') {
       base.push({
-        q: `Who loves ${name} the most in the entire universe?`,
+        q: `Who loves ${displayName} the most in the entire universe?`,
         options: ["The Cat", "Their Neighbor", "The Person Who Sent This Website", "A Martian"],
         correct: 2,
         reason: "The person who sent this loves them more than stars in the sky."
@@ -58,7 +59,7 @@ export const BirthdayQuiz = () => {
 
     if (interests?.includes('coding')) {
       base.push({
-        q: `What is ${name}'s biggest fear?`,
+        q: `What is ${displayName}'s biggest fear?`,
         options: ["Spiders", "Heights", "A bug in production at 4 PM on a Friday", "Running out of coffee"],
         correct: 2,
         reason: "Real coders know... bugs are the ultimate nightmare!"
@@ -66,7 +67,7 @@ export const BirthdayQuiz = () => {
     }
 
     base.push({
-      q: `If ${name} was a superhero, what would their name be?`,
+      q: `If ${displayName} was a superhero, what would their name be?`,
       options: ["Captain Sleep-A-Lot", "The Procrastinator", "Super Legendary Birthday Person", "Iron Coffee-Man"],
       correct: 2,
       reason: "Today, you're the hero we all need!"

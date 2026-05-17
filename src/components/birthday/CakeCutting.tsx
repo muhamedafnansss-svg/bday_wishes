@@ -379,7 +379,7 @@ export const CakeCutting = () => {
       { text: `Let's make some noise! 🎉`, animation: "float" as const },
     ];
     return [
-      { text: `For our ${isMale ? 'King' : isFemale ? 'Queen' : 'Favorite Human'}...`, animation: "zoom-in" as const },
+      { text: `For my ${isMale ? 'King' : isFemale ? 'Queen' : 'Favorite Human'}...`, animation: "zoom-in" as const },
       { text: "A truly wonderful soul", animation: "pop-out" as const },
       { text: "May your day be magical", animation: "stagger-up" as const },
       { text: "Happy Birthday!", animation: "typewriter-burst" as const },

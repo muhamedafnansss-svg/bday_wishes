@@ -61,7 +61,7 @@ const Index = () => {
           <motion.div
             key="splash"
             initial={{ opacity: 1 }}
-            exit={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
+            exit={{ opacity: 0, scale: 1.1, filter: isMobile ? "blur(0px)" : "blur(20px)" }}
             transition={{ duration: 1 }}
           >
             <SplashScreen onStart={() => setPhase("intro")} />
@@ -73,7 +73,7 @@ const Index = () => {
             key="intro"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, scale: 0.9, filter: "blur(20px)" }}
+            exit={{ opacity: 0, scale: 0.9, filter: isMobile ? "blur(0px)" : "blur(20px)" }}
             transition={{ duration: 1 }}
           >
             <CinematicIntro onComplete={() => setPhase("main")} />
@@ -83,7 +83,7 @@ const Index = () => {
         {phase === "main" && (
           <motion.div
             key="main"
-            initial={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
+            initial={{ opacity: 0, scale: 1.1, filter: isMobile ? "blur(0px)" : "blur(20px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.5, ease: "easeOut" }}
           >

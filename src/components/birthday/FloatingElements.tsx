@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useBirthdayStore } from '@/features/core/store/useBirthdayStore';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface FloatingItem {
   id: number;
@@ -17,6 +18,7 @@ export const FloatingElements = () => {
   const [items, setItems] = useState<FloatingItem[]>([]);
   const relationship = useBirthdayStore(state => state.config.relationship);
   const { scrollY } = useScroll();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const elementsList = 
@@ -46,7 +48,7 @@ export const FloatingElements = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Background Atmosphere Blobs (Layer 1) */}
-      <div className="absolute inset-0 opacity-20 blur-[120px]">
+      <div className={`absolute inset-0 opacity-20 ${isMobile ? 'blur-[40px]' : 'blur-[120px]'}`}>
         <motion.div 
           animate={{ 
             x: [0, 150, 0], 
@@ -87,7 +89,8 @@ const ParallaxItem = ({ item, scrollY }: { item: FloatingItem; scrollY: any }) =
         top: `${item.y}%`,
         fontSize: `${item.size}rem`,
         opacity: 0.15 / item.depth,
-        filter: `blur(${item.depth - 1}px)`,
+        filter: isMobile ? `blur(${Math.max(0, item.depth - 2)}px)` : `blur(${item.depth - 1}px)`,
+        willChange: "transform",
         y,
       }}
       initial={{ y: 0 }}

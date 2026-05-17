@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Gradient {
   id: number;
@@ -9,6 +10,7 @@ interface Gradient {
 }
 
 export const AnimatedGradient = () => {
+  const isMobile = useIsMobile();
   const gradients: Gradient[] = [
     {
       id: 1,
@@ -41,7 +43,8 @@ export const AnimatedGradient = () => {
           className="absolute inset-0"
           style={{
             background: `conic-gradient(${gradient.color1}, ${gradient.color2})`,
-            filter: "blur(80px)",
+            filter: isMobile ? "blur(30px)" : "blur(80px)",
+            willChange: "transform, opacity",
           }}
           animate={{
             rotate: [0, 360],

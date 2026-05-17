@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface MorphShape {
   id: number;
@@ -11,6 +12,7 @@ interface MorphShape {
 }
 
 export const MorphingElements = () => {
+  const isMobile = useIsMobile();
   const shapes: MorphShape[] = [
     {
       id: 1,
@@ -62,7 +64,8 @@ export const MorphingElements = () => {
             backgroundColor: shape.color,
             left: `${shape.startX}%`,
             top: `${shape.startY}%`,
-            filter: "blur(40px)",
+            filter: isMobile ? "blur(20px)" : "blur(40px)",
+            willChange: "transform",
           }}
           animate={{
             x: [0, 50, -30, 0],

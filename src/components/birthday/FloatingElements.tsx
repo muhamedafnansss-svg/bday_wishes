@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { useBirthdayStore } from '@/features/core/store/useBirthdayStore';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -81,7 +81,7 @@ export const FloatingElements = () => {
   );
 };
 
-const ParallaxItem = ({ item, scrollY, isMobile }: { item: FloatingItem; scrollY: any; isMobile: boolean }) => {
+const ParallaxItem = ({ item, scrollY, isMobile }: { item: FloatingItem; scrollY: MotionValue<number>; isMobile: boolean }) => {
   const y = useTransform(scrollY, [0, 2000], [0, -item.depth * 400]);
 
   return (

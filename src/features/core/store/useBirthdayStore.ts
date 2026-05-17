@@ -102,7 +102,7 @@ export const useBirthdayStore = create<BirthdayStore>((set, get) => ({
     customMessage: envMessage,
     senderName: envSenderName,
     birthdayDate: envDate,
-    animationSpeed: (import.meta.env.VITE_ANIMATION_SPEED as any) || null,
+    animationSpeed: (import.meta.env.VITE_ANIMATION_SPEED as 'slow' | 'moderate' | 'fast' | undefined) || null,
     particleCount: import.meta.env.VITE_PARTICLE_COUNT ? parseInt(import.meta.env.VITE_PARTICLE_COUNT, 10) : 25,
     videos: envVideos,
     letterTitle: envLetterTitle,

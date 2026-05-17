@@ -263,7 +263,7 @@ const CakeSVG = ({ cake, split, candlesLit, name, springConfig }: { cake: CakeOp
           className="font-display font-black uppercase" 
           style={{ fontSize: '9px', textShadow: '0 1px 2px rgba(0,0,0,0.8)', letterSpacing: '2px' }}
         >
-          {name}
+          {name || "Aaachyaaa"}
         </text>
       </g>
       {/* Cutting Line Effect */}

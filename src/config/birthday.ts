@@ -8,7 +8,7 @@ import { config } from "../config";
  */
 
 // Strict ENV Parser to reject Vercel glitches like "undefined" or "null" strings
-const parseEnvStr = (val: any): string | null => {
+const parseEnvStr = (val: string | undefined): string | null => {
     if (!val) return null;
     const str = String(val).trim();
     if (str === "" || str === "null" || str === "undefined") return null;

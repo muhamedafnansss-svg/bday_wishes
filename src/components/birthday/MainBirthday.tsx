@@ -394,28 +394,6 @@ export const MainBirthday = () => {
 
 
 
-      {/* Magnetic Buttons Section */}
-      <section className="relative z-20 flex flex-wrap justify-center gap-8 px-4 pb-32">
-        {[
-          { label: "🎊 Cannon!", color: primaryColor, action: fireCannon },
-          { label: "🎈 Party!", color: "hsl(45, 100%, 50%)", action: fireConfetti },
-          { label: "💫 Love!", color: "hsl(200, 80%, 50%)", action: () => { for (let i = 0; i < 5; i++) setTimeout(addEmoji, i * 200); } }
-        ].map((btn, i) => (
-          <motion.button
-            key={i}
-            whileHover={shouldAnimate ? { scale: 1.15, rotate: i % 2 === 0 ? 3 : -3 } : undefined}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => { btn.action(); addEmoji(); }}
-            className="px-12 py-6 rounded-full text-2xl font-black text-white shadow-2xl transition-all"
-            style={{ 
-              background: `linear-gradient(135deg, ${btn.color}, ${btn.color}dd)`,
-              boxShadow: `0 15px 45px -10px ${btn.color}60` 
-            }}
-          >
-            {btn.label}
-          </motion.button>
-        ))}
-      </section>
 
       <HeartTree delay={500} />
       

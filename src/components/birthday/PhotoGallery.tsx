@@ -3,9 +3,9 @@ import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from
 import { PHOTO_ASSETS } from "@/config/birthday";
 import { useBirthdayStore } from "@/features/core/store/useBirthdayStore";
 import { useIsMobile } from "@/hooks/use-mobile";
-import photo1Default from "@/assets/photo-1.jpg";
-import photo2Default from "@/assets/photo-2.jpg";
-import photo3Default from "@/assets/photo-3.jpg";
+import photo1Default from "@/assets/1.png.jpeg";
+import photo2Default from "@/assets/2.png.jpeg";
+import photo3Default from "@/assets/3.png.jpeg";
 
 export const PhotoGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -116,7 +116,7 @@ export const PhotoGallery = () => {
           viewport={{ once: true }}
           className="font-display text-6xl md:text-8xl lg:text-[10rem] font-black text-center mb-24 bg-gradient-to-b from-white via-white/80 to-white/20 bg-clip-text text-transparent drop-shadow-2xl"
         >
-          GALLERY ✨
+          THOUGHTS ✨
         </motion.h3>
 
         <motion.div 

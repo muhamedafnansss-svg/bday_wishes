@@ -73,13 +73,13 @@ export const FloatingElements = () => {
 
       {/* Floating Emojis (Layer 2 & 3 with Parallax) */}
       {items.map(item => (
-        <ParallaxItem key={item.id} item={item} scrollY={scrollY} />
+        <ParallaxItem key={item.id} item={item} scrollY={scrollY} isMobile={isMobile} />
       ))}
     </div>
   );
 };
 
-const ParallaxItem = ({ item, scrollY }: { item: FloatingItem; scrollY: any }) => {
+const ParallaxItem = ({ item, scrollY, isMobile }: { item: FloatingItem; scrollY: any; isMobile: boolean }) => {
   const y = useTransform(scrollY, [0, 2000], [0, -item.depth * 400]);
 
   return (

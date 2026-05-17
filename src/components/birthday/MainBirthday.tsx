@@ -328,12 +328,12 @@ export const MainBirthday = () => {
                 onDoubleClick={() => { fireCannon(); playBoom(); }}
                 title="Double tap for a surprise!"
               >
-                {config.letterTitle || "Someone who is more than a friend... From Fahd 💌"}
+                {config.letterTitle || "Someone dear to me 💌"}
               </h4>
               <div className="text-left text-lg md:text-xl leading-relaxed whitespace-pre-line font-light">
                 {config.letterOverride
                   ? `${config.letterOverride}${letterSignoff}`
-                  : `${getHighlySpecificLetter(name, relationship, gender, config.interests)}${letterSignoff}`}
+                  : `To someone who is more than just a friend,\n\nYou have brought so much light and joy into my life. Every moment shared with you is a treasure, and I am incredibly grateful to have you by my side. You truly are someone dear to me.\n\nWishing you a birthday as beautiful and special as you are.${letterSignoff}`}
               </div>
             </div>
           </div>

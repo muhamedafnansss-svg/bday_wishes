@@ -153,7 +153,7 @@ export const MainBirthday = () => {
     }
   };
 
-  const interestIcons: Record<string, any> = {
+  const interestIcons: Record<string, React.ElementType> = {
     car: Car,
     music: Music,
     coding: Code,

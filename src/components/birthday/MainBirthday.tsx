@@ -328,7 +328,7 @@ export const MainBirthday = () => {
                 onDoubleClick={() => { fireCannon(); playBoom(); }}
                 title="Double tap for a surprise!"
               >
-                {config.letterTitle || "A Special Letter Just for You 💌"}
+                {config.letterTitle || "Someone who is more than a friend... From Fahd 💌"}
               </h4>
               <div className="text-left text-lg md:text-xl leading-relaxed whitespace-pre-line font-light">
                 {config.letterOverride
